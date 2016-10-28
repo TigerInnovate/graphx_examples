@@ -4,6 +4,7 @@
 1. 为什么对VertexRDD进行mapValues操作后，collect后还是(1, null)的null
 2. 对VertexRDD进行map操作，为什么只能用变量x，而不能用元祖(vid, data)
 3. aggregateMessage对没有收到消息的vertex进行merge后，为什么Int是0，而其他类型是null
+4. 一般情况下，需要对aggregateMessages的data做null判读处理
 */
 import org.apache.spark.graphx._
 val myVertices = sc.makeRDD(Array((1L, "Ann"), (2L, "Bill"),
